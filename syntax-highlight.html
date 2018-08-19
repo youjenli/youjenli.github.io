@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/prism.css" />
+        <script src="js/prism.js" type="text/javascript" ></script>
+    </head>
+    <body>
+        這是用來檢視 prism.js 功效的網頁, 使用的場景是 TWILIGHT, 語言包含 Markup, Markdown, css, Content-Security-Policy, javascript, JSON, docker, git, 
+        java, groovy, http, .properties, React JSX, React TSX, SQL, TypeScript, ini, 擴充套件有 Line Highlight 和 Line Numbers <br />
+
+        <h3>Markup</h3>
+        <pre><code class=class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Sign Up&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    ... Content ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        
+        <h3>Markdown</h3>
+        <pre><code class="language-markdown"># h1 Heading 8-)
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+
+
+## Horizontal Rules
+
+___
+
+---
+
+***
+
+
+## Typographic replacements
+
+Enable typographer option to see result.
+
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+test.. test... test..... test?..... test!....
+
+!!!!!! ???? ,,  -- ---
+
+"Smartypants, double quotes" and 'single quotes'
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1. bar</code></pre>
+
+        <h3>css</h3>
+        <pre><code class="language-css">div {
+    border: 1px solid black;
+    padding: 25px 50px 75px 100px;
+    background-color: lightblue;
+}</code></pre>
+
+        <h3>javascript</h3>
+        <pre><code class="language-javascript">$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});</code></pre>
+
+        <h3>JSON</h3>
+        <pre><code class="language-json">{
+    "glossary": {
+        "title": "example glossary",
+        "GlossDiv": {
+            "title": "S",
+            "GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+                    "SortAs": "SGML",
+                    "GlossTerm": "Standard Generalized Markup Language",
+                    "Acronym": "SGML",
+                    "Abbrev": "ISO 8879:1986",
+                    "GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+                        "GlossSeeAlso": ["GML", "XML"]
+                    },
+                    "GlossSee": "markup"
+                }
+            }
+        }
+    }
+}</code></pre>
+
+        <h3>docker</h3>
+        <pre><code class="language-docker"># A basic apache server. To use either add or bind mount content under /var/www
+FROM ubuntu:12.04
+
+MAINTAINER Kimbro Staken version: 0.1
+
+RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+
+EXPOSE 80
+
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]</code></pre>
+
+        <h3>git</h3>
+        <pre><code class="language-git"># Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db</code></pre>
+
+        <h3>java</h3>
+        <pre><code class="language-java">import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Scanner;
+
+public class URLExpSimple {
+
+    public static void main(String[] args) {
+        try {
+            URL mySite = new URL("http://www.cs.utexas.edu/~scottm");
+            URLConnection yc = mySite.openConnection();
+            Scanner in = new Scanner(new InputStreamReader(yc.getInputStream()));
+            int count = 0;
+            while (in.hasNext()) {
+                System.out.println(in.next());
+                count++;
+            }
+            System.out.println("Number of tokens: " + count);
+            in.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+
+        <h3>groovy</h3>
+        <pre>
+            <code class="language-groovy">
+class Example {
+    static void main(String[] args) {
+       def src = new File("E:/Example.txt")
+       def dst = new File("E:/Example1.txt")
+       dst << src.text
+    } 
+}
+
+class Example { 
+    static void main(String[] args) { 
+       def rootFiles = new File("test").listRoots() 
+       rootFiles.each { 
+          file -> println file.absolutePath 
+       }
+    }
+}</code>
+        </pre>
+
+        <h3>http</h3>
+        <pre><code class="language-http">POST /cgi-bin/process.cgi HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: www.tutorialspoint.com
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Connection: Keep-Alive
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;string xmlns=&quot;http://clearforest.com/&quot;&gt;string&lt;/string&gt;</code></pre>
+
+        <h3>.properties</h3>
+        <pre><code class="language-properties">version=1.0
+name=TestApp
+date=2016-11-12
+dbpassword=password
+database=localhost
+dbuser=mkyong</code></pre>
+
+        <h3>React JSX</h3>
+        <pre><code class="language-ReactJSX">class Calculator extends React.Component {
+constructor(props) {
+  super(props);
+  this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+  this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+  this.state = {temperature: '', scale: 'c'};
+}
+               handleCelsiusChange(temperature) {
+  this.setState({scale: 'c', temperature});
+}
+               handleFahrenheitChange(temperature) {
+  this.setState({scale: 'f', temperature});
+}
+               render() {
+  const scale = this.state.scale;
+  const temperature = this.state.temperature;
+  const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
+  const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+                 return (
+    &lt;div&gt;
+      &lt;TemperatureInput
+        scale=&quot;c&quot;
+        temperature={celsius}
+        onTemperatureChange={this.handleCelsiusChange} /&gt;
+                     &lt;TemperatureInput
+        scale=&quot;f&quot;
+        temperature={fahrenheit}
+        onTemperatureChange={this.handleFahrenheitChange} /&gt;
+                     &lt;BoilingVerdict
+        celsius={parseFloat(celsius)} /&gt;
+                   &lt;/div&gt;
+  );
+}</code></pre>
+
+        <h3>React TSX</h3>
+        <pre><code class="language-ReactTSX">/// &lt;reference path=&quot;../typings/bundle.d.ts&quot; /&gt;
+import * as React from 'react';
+import {TodoItem} from './todoItem';
+
+interface ITodo {
+    description: string;
+    key: number;
+}
+
+export interface IMainState {
+    newItem?: {
+        description: string;
+    };
+    todoList?: ITodo[];
+}
+
+export interface IMainProps {}
+
+export class Main extends React.Component&lt;IMainProps, IMainState&gt; {
+
+    state: IMainState = {newItem: {description: ''}, todoList: []}
+
+    constructor () {
+        super();
+        this.changeName = this.changeName.bind(this);
+        this.addItem = this.addItem.bind(this);
+        this.removeItem = this.removeItem.bind(this);
+    }
+
+    changeName (e: any) {
+        this.setState({
+            newItem: {
+                description: e.target.value
+            }
+        });
+    }
+
+    addItem () {
+        var list = this.state.todoList;
+        list.push({
+            description: this.state.newItem.description,
+            key: new Date().getTime()
+        });
+        this.setState({
+            todoList: list,
+            newItem: {description: ''}
+        });
+    }
+
+    removeItem (item: ITodo) {
+        var list = this.state.todoList.filter(i =&gt; i.key !== item.key);
+        this.setState({todoList: list});
+    }
+
+    render () {
+        var todoItems = this.state.todoList.map(item =&gt; {
+            return &lt;TodoItem key={item.key} item={item} onRemove={this.removeItem} &gt;&lt;/TodoItem&gt;;
+        });
+        return (
+            &lt;div&gt;
+                &lt;div&gt;
+                    &lt;input type=&quot;text&quot; placeholder=&quot;input new item&quot; value={this.state.newItem.description} onChange={this.changeName} /&gt;
+                    &lt;button onClick={this.addItem} &gt;add&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;ul&gt;{todoItems}&lt;/ul&gt;
+            &lt;/div&gt;
+        );
+    }
+}</code></pre>
+
+        <h3>SQL</h3>
+        <pre><code class="language-SQL">Select rollno, count (rollno) from Student
+Group by rollno
+Having count (rollno)>1
+Order by count (rollno) desc;
+
+Select rollno FROM Student WHERE ROWID <>
+(Select max (rowid) from Student b where rollno=b.rollno);
+
+Delete FROM Student WHERE ROWID <> 
+(Select max (rowid) from Student b where rollno=b.rollno);
+</code></pre>
+
+        <h3>TypeScript</h3>
+        <pre><code class="language-TypeScript">function extend<T, U>(first: T, second: U): T & U {
+    let result = <T & U>{};
+    for (let id in first) {
+        (<any>result)[id] = (<any>first)[id];
+    }
+    for (let id in second) {
+        if (!result.hasOwnProperty(id)) {
+            (<any>result)[id] = (<any>second)[id];
+        }
+    }
+    return result;
+}
+
+class Person {
+    constructor(public name: string) { }
+}
+interface Loggable {
+    log(): void;
+}
+class ConsoleLogger implements Loggable {
+    log() {
+        // ...
+    }
+}
+var jim = extend(new Person("Jim"), new ConsoleLogger());
+var n = jim.name;
+jim.log();</code></pre>
+
+        <h3>ini</h3>
+        <pre>
+<code class="language-ini">; last modified 1 April 2001 by John Doe
+[owner]
+name=John Doe
+organization=Acme Widgets Inc.
+
+[database]
+; use IP address in case network name resolution is not working
+server=192.0.2.62     
+port=143
+file="payroll.dat"
+</code></pre>
+
+        <h3>擴充套件 Line Highlight </h3>
+        <pre id="line-hl-demo" data-line="1-5,12,15-17"><code class="language-markdown">># h1 Heading 8-)
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+
+## Horizontal Rules
+
+___
+
+---
+
+***
+
+
+## Typographic replacements
+
+Enable typographer option to see result.
+
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+test.. test... test..... test?..... test!....
+
+!!!!!! ???? ,,  -- ---
+
+"Smartypants, double quotes" and 'single quotes'
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1. bar</code></pre>
+跳至<a href="#line-hl-demo.3">範例第三行</a>
+
+        <h3>擴充套件 Line Numbers </h3>
+<pre class="line-numbers" ><code class="language-markdown"># h1 Heading 8-)
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+
+## Horizontal Rules
+
+___
+
+---
+
+***
+
+
+## Typographic replacements
+
+Enable typographer option to see result.
+
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+test.. test... test..... test?..... test!....
+
+!!!!!! ???? ,,  -- ---
+
+&quot;Smartypants, double quotes&quot; and 'single quotes'
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1. bar</code></pre>
+    </body>
+</html>
