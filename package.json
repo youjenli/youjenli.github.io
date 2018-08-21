@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "yarn install",
-    "start":"./node_modules/.bin/http-server"
+    "start":"./node_modules/.bin/http-server -o -c-1"
   },
   "repository": {
     "type": "git",

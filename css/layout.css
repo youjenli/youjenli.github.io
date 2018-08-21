@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+div.words {
+    margin-top:2rem;
+}
+
+div.fontSize {
+    font-weight: bold;
+    margin-bottom:2rem;
+}
