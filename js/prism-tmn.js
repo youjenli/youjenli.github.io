@@ -1,5 +1,5 @@
 /* PrismJS 1.15.0
-https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+clike+javascript+bash+batch+csp+docker+markup-templating+git+groovy+http+ini+java+json+markdown+php+sql+properties+jsx+typescript+tsx&plugins=line-highlight+line-numbers+autolinker */
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+bash+batch+csp+docker+markup-templating+git+groovy+http+ini+java+json+markdown+php+sql+properties+jsx+typescript+tsx&plugins=line-highlight+line-numbers+autolinker */
 var _self = (typeof window !== 'undefined')
 	? window   // if in browser
 	: (

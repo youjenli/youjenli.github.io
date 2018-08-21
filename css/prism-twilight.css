@@ -1,5 +1,5 @@
 /* PrismJS 1.15.0
-https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+clike+javascript+csp+docker+git+groovy+http+ini+java+json+markdown+sql+properties+jsx+typescript+tsx&plugins=line-highlight+line-numbers */
+https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+clike+javascript+bash+batch+csp+docker+markup-templating+git+groovy+http+ini+java+json+markdown+php+sql+properties+jsx+typescript+tsx&plugins=line-highlight+line-numbers+autolinker */
 /**
  * prism.js Twilight theme
  * Based (more or less) on the Twilight theme originally of Textmate fame.
@@ -291,3 +291,6 @@ pre[class*="language-"].line-numbers > code {
 			text-align: right;
 		}
 
+.token a {
+	color: inherit;
+}

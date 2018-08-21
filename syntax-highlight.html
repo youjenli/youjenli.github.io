@@ -6,8 +6,8 @@
         <script src="js/prism-twilight.js" type="text/javascript" ></script>
     </head>
     <body>
-        這是用來檢視 prism.js 功效的網頁, 使用的場景是 TWILIGHT, 語言包含 Markup, Markdown, css, Content-Security-Policy, javascript, JSON, docker, git, 
-        java, groovy, http, .properties, React JSX, React TSX, SQL, TypeScript, ini, 擴充套件有 Line Highlight 和 Line Numbers <br />
+        這是用來檢視 prism.js 功效的網頁, 使用的場景是 TWILIGHT, 語言包含 Bash, Batch, Markup, Markdown, css, Content-Security-Policy, javascript, JSON, docker, git, 
+        java, groovy, http, php, .properties, React JSX, React TSX, SQL, TypeScript, ini, 擴充套件有 Line Highlight, Line Numbers 和 Autolinker <br />
 
         <h3>Markup</h3>
         <pre><code class=class="language-markup">&lt;!DOCTYPE html&gt;
@@ -201,9 +201,7 @@ public class URLExpSimple {
 }</code></pre>
 
         <h3>groovy</h3>
-        <pre>
-            <code class="language-groovy">
-class Example {
+        <pre><code class="language-groovy">class Example {
     static void main(String[] args) {
        def src = new File("E:/Example.txt")
        def dst = new File("E:/Example1.txt")
@@ -218,8 +216,7 @@ class Example {
           file -> println file.absolutePath 
        }
     }
-}</code>
-        </pre>
+}</code></pre>
 
         <h3>http</h3>
         <pre><code class="language-http">POST /cgi-bin/process.cgi HTTP/1.1
@@ -516,5 +513,56 @@ Start numbering with offset:
 
 57. foo
 1. bar</code></pre>
+
+        <h3>PHP</h3>
+        <pre><code class="language-php">Name: &lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;&lt;?php echo $name;?&gt;&quot;&gt;
+
+E-mail: &lt;input type=&quot;text&quot; name=&quot;email&quot; value=&quot;&lt;?php echo $email;?&gt;&quot;&gt;
+
+Website: &lt;input type=&quot;text&quot; name=&quot;website&quot; value=&quot;&lt;?php echo $website;?&gt;&quot;&gt;
+
+Comment: &lt;textarea name=&quot;comment&quot; rows=&quot;5&quot; cols=&quot;40&quot;&gt;&lt;?php echo $comment;?&gt;&lt;/textarea&gt;
+
+Gender:
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot;
+&lt;?php if (isset($gender) &amp;&amp; $gender==&quot;female&quot;) echo &quot;checked&quot;;?&gt;
+value=&quot;female&quot;&gt;Female
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot;
+&lt;?php if (isset($gender) &amp;&amp; $gender==&quot;male&quot;) echo &quot;checked&quot;;?&gt;
+value=&quot;male&quot;&gt;Male
+&lt;input type=&quot;radio&quot; name=&quot;gender&quot;
+&lt;?php if (isset($gender) &amp;&amp; $gender==&quot;other&quot;) echo &quot;checked&quot;;?&gt;
+value=&quot;other&quot;&gt;Other</code></pre>
+
+        <h3>Bash</h3>
+        <pre><code class="language-bash">#!/bin/bash
+# use predefined variables to access passed arguments
+#echo arguments to the shell
+echo $1 $2 $3 ' -> echo $1 $2 $3'
+
+# We can also store arguments from bash command line in special array
+args=("$@")
+#echo arguments to the shell
+echo ${args[0]} ${args[1]} ${args[2]} ' -> args=("$@"); echo ${args[0]} ${args[1]} ${args[2]}'
+
+#use $@ to print out all arguments at once
+echo $@ ' -> echo $@'
+
+# use $# variable to print out
+# number of arguments passed to the bash script
+echo Number of arguments passed: $# ' -> echo Number of arguments passed: $#'</code></pre>
+
+        <h3>Batch</h3>
+        <pre><code class="language-batch">@ECHO OFF 
+cd c:\source
+REM This is the location of the files that you want to sort
+FOR %%f IN (*.doc *.txt) DO XCOPY c:\source\"%%f" c:\text /m /y
+REM This moves any files with a .doc or 
+REM .txt extension from c:\source to c:\text
+REM %%f is a variable
+FOR %%f IN (*.jpg *.png *.bmp) DO XCOPY C:\source\"%%f" c:\images /m /y
+REM This moves any files with a .jpg, .png, 
+REM or .bmp extension from c:\source to c:\images</code></pre>
+
     </body>
 </html>
