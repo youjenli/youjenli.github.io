@@ -5,8 +5,10 @@ function renderView() {
 
     const currentWidth = document.getElementById('currentWidth');
     currentWidth.innerHTML = range.value + "px";
-    const screen = document.getElementById('screen');
-    screen.innerHTML = window.innerWidth + "px";
+    const screenWidth = document.getElementById('screenWidth');
+    screenWidth.innerHTML = window.innerWidth + "px";
+    const screenHeight = document.getElementById('screenHeight');
+    screenHeight.innerHTML = window.innerHeight + "px";
 
     const test = document.getElementById('test');
     const showDefaultFontSize = document.getElementById('defaultFontSize');
