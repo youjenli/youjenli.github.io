@@ -18,5 +18,6 @@ npm start
 ```
 
 接下來就可以在透過瀏覽器在 `localhost:8080/{網頁名稱}` 瀏覽靜態網頁  
+若需要指定伺服器採用的 ip, 你可以藉由在 npm start 指令後面加上 `-- -a ${想要起伺服器的 ip}` 來實現  
 
 如果需了解如何調整 http 伺服器, 請參閱 [http-server](https://www.npmjs.com/package/http-server) 套件的官方說明  
