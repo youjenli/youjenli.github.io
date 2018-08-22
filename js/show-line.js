@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+function renderView() {
     const main = document.getElementById('main');
     const range = document.getElementById('content-width');
     range.setAttribute('value', window.innerWidth);
@@ -66,4 +66,7 @@ window.addEventListener('load', function(){
     });
 
     renderText();
-});
+}
+
+window.addEventListener('load', renderView);
+window.addEventListener('orientationchange', renderView);
