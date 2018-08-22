@@ -10,3 +10,14 @@ div.fontSize {
     font-weight: bold;
     margin-bottom:2rem;
 }
+
+#switch {
+    font-size:1.25rem;
+}
+
+#main {
+    width:100%;
+    margin:0 auto;
+    min-height:100px;
+    background-color:lightgray;
+}

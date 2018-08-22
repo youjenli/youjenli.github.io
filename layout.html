@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>畫面內容設計</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/show-line.js"></script>
-        <link href="css/layout.css" rel="stylesheet" />
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <title>畫面內容設計</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/show-line.js"></script>
+    <link href="css/layout.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>螢幕預設寬度是 <span id="screen"></span></h2>
+    <fieldset>
+        <legend>顯示範圍</legend>
+        <label for="content-width">寬度 <span id="currentWidth"></span> (單位 px)</label>
+        <input type="range" id="content-width" name="content-width" min="720" max="1920" value="1280"/>
+    </fieldset>
+    <div id="main"></div>
+</body>
+
 </html>
