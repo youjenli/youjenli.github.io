@@ -61,13 +61,66 @@ function renderView() {
         }
     }
 
+    function renderButton() {
+        const btns = document.getElementById('btns');
+        for (let k = 1 ; k <= 3 ; k ++ ) {
+            const btn = document.createElement('div');
+            btn.style.width = k + "rem";
+            btn.style.height = k + "rem";
+            btn.classList.add('c0');
+            btn.classList.add('btn');
+            btn.innerHTML = k + "rem";
+            btns.appendChild(btn);
+        }
+
+        for (let i = 40, j = 0 ; i <= 96 ; i += 4 , j++) {
+            const btn = document.createElement('div');
+            btn.style.width = i + "px";
+            btn.style.height = i + "px";
+            btn.classList.add("c" + (j % 7));
+            btn.classList.add("btn");
+            btn.innerHTML = i + "px";
+            btns.appendChild(btn);
+        }
+    }
+
+    function renderMenu() {
+        const menuList = document.getElementById("menu-list");
+        for (let m = 16, n = 0 ; m <= 120 ; m += 4, n++) {
+            const menu = document.createElement('div');
+            menu.style.height = m + "px";
+            menu.classList.add("c" + (n % 7));
+            menu.classList.add("menu");
+
+            const des = document.createElement('span');
+            des.classList.add("menu-description");
+            des.style.fontSize = Math.min(m, 40) + "px";
+            des.innerHTML = "高 " + m + "px";
+            menu.appendChild(des);
+
+            for (let o = 16 ; o <= 72 ; o += 4) {
+                const text = document.createElement("span");
+                text.innerHTML = o + "px";
+                text.style.fontSize = o + "px";
+                text.classList.add("menu-item");
+                menu.appendChild(text);
+            }
+
+            menuList.appendChild(menu);
+        }
+    }
+
     range.addEventListener('change', function(){
         main.style.width = range.value + "px";
         currentWidth.innerHTML = range.value + "px";
         renderText();
+        renderButton();
+        renderMenu();
     });
 
     renderText();
+    renderButton();
+    renderMenu();
 }
 
 window.addEventListener('load', renderView);
