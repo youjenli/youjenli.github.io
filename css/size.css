@@ -1,305 +1,309 @@
-body {
-    background-color:gray;
-    /*margin:0*/
-  }
-  
   #btns {
-    display:flex;
-    justify-content:space-between;
-    align-item:center;
-  }
-  
-  .btn {
-    /*font-size:14px;*/
-    box-shadow:0 2px 1px 1px lightgray;
-  }
-  
-  .btn0, .btn1, .btn1-1, .btn8 {
-    background-color:red;
-  }
-  
-  .btn0 { 
-    width:44px;
-    height:44px;
-    font-size:1rem;
-  }
-  
-  .btn1 { 
-    width:44px;
-    height:44px;
-    font-size:16px;
-  }
-  
-  .btn1-1 { 
-    width:44px;
-    height:44px;
-    font-size:2rem;
-  }
-  
-  .btn2, .btn9 {
-    background-color:orange;
-  }
-  
-  .btn2 { 
-    width:48px;
-    height:48px;
-  }
-  
-  .btn3, .btn10 {
-    background-color:yellow;
-  }
-  
-  .btn3 {
-    width:52px;
-    height:52px;
-  }
-  
-  .btn4, .btn11 {
-    background-color:green;
-  }
-  
-  .btn4 {
-    width:56px;
-    height:56px;
-  }
-  
-  .btn5, .btn12 {
-    background-color:blue;
-  }
-  
-  .btn5 {
-    width:60px;
-    height:60px;
-  }
-  
-  .btn6 {
-    background-color:indigo;
-  }
-  
-  .btn6 {
-    width:64px;
-    height:64px;
-  }
-  
-  .btn7 {
-    background-color:violet;
-  }
-  
-  .btn7 {
-    width:68px;
-    height:68px;
-  }
-  
-  .btn8 {
-    width:72px;
-    height:72px;
-  }
-  
-  .btn9 {
-    width:76px;
-    height:76px;
-  }
-  
-  .btn10 {
-    width:80px;
-    height:80px;
-  }
-  
-  .btn11 {
-    width:84px;
-    height:84px;
-  }
-  
-  .btn12 {
-    width:84px;
-    height:84px;
-  }
-  
-  .font {
-    color:lightgray;
-  }
-  
-  .menu {
-    width:100%;
-    color:lightgray;
-    margin:4.5rem 0;
-    display:flex;
+    display: flex;
+    justify-content: flex-start;
     align-items:center;
   }
-  
+
+  .btn {
+    /*font-size:14px;*/
+    box-shadow: 0 2px 1px 1px lightgray;
+  }
+
+  .btn0,
+  .btn1,
+  .btn1-1,
+  .btn8 {
+    background-color: red;
+  }
+
+  .btn0 {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+
+  .btn1 {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .btn1-1 {
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+  }
+
+  .btn2,
+  .btn9 {
+    background-color: orange;
+  }
+
+  .btn2 {
+    width: 48px;
+    height: 48px;
+  }
+
+  .btn3,
+  .btn10 {
+    background-color: yellow;
+  }
+
+  .btn3 {
+    width: 52px;
+    height: 52px;
+  }
+
+  .btn4,
+  .btn11 {
+    background-color: green;
+  }
+
+  .btn4 {
+    width: 56px;
+    height: 56px;
+  }
+
+  .btn5,
+  .btn12 {
+    background-color: blue;
+  }
+
+  .btn5 {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btn6 {
+    background-color: indigo;
+  }
+
+  .btn6 {
+    width: 64px;
+    height: 64px;
+  }
+
+  .btn7 {
+    background-color: violet;
+  }
+
+  .btn7 {
+    width: 68px;
+    height: 68px;
+  }
+
+  .btn8 {
+    width: 72px;
+    height: 72px;
+  }
+
+  .btn9 {
+    width: 76px;
+    height: 76px;
+  }
+
+  .btn10 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn11 {
+    width: 84px;
+    height: 84px;
+  }
+
+  .btn12 {
+    width: 84px;
+    height: 84px;
+  }
+
+  .font {
+    color: lightgray;
+  }
+
+  .menu {
+    width: 100%;
+    color: lightgray;
+    margin: 4.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+
   .menu-name {
-    color:black;
+    color: black;
   }
-  
+
   .size16 {
-   font-size:16px; 
+    font-size: 16px;
   }
-  
+
   .size18 {
-    font-size:18px;
+    font-size: 18px;
   }
-  
+
   .size20 {
-   font-size:20px; 
+    font-size: 20px;
   }
-  
+
   .rem1 {
-    font-size:1rem;
+    font-size: 1rem;
   }
-  
+
   .size22 {
-    font-size:22px;
+    font-size: 22px;
   }
-  
+
   .size24 {
-   font-size:24px; 
+    font-size: 24px;
   }
-  
+
   .size26 {
-    font-size:26px;
+    font-size: 26px;
   }
-  
+
   .size28 {
-   font-size:28px; 
+    font-size: 28px;
   }
-  
+
   .size30 {
-    font-size:30px;
+    font-size: 30px;
   }
-  
+
   .size32 {
-   font-size:32px; 
+    font-size: 32px;
   }
-  
+
   .size34 {
-    font-size:34px;
+    font-size: 34px;
   }
-  
+
   .size36 {
-   font-size:36px; 
+    font-size: 36px;
   }
-  
+
   .size38 {
-    font-size:38px;
+    font-size: 38px;
   }
-  
+
   .size40 {
-   font-size:40px; 
+    font-size: 40px;
   }
-  
+
   .rem2 {
-    font-size:2rem;
+    font-size: 2rem;
   }
-  
+
   .size44 {
-   font-size:44px; 
+    font-size: 44px;
   }
-  
+
   .size48 {
-   font-size:48px; 
+    font-size: 48px;
   }
-  
+
   .size52 {
-   font-size:52px; 
+    font-size: 52px;
   }
-  
+
   .size56 {
-   font-size:56px; 
+    font-size: 56px;
   }
-  
+
   .size60 {
-   font-size:56px; 
+    font-size: 56px;
   }
-  
+
   .size64 {
-    font-size:64px;
+    font-size: 64px;
   }
-  
+
   .size68 {
-    font-size:68px;
+    font-size: 68px;
   }
-  
+
   .size72 {
-    font-size:72px;
+    font-size: 72px;
   }
-  
+
   .rem3 {
-    font-size:3rem;
+    font-size: 3rem;
   }
-  
+
   .size64 {
-   font-size:56px; 
+    font-size: 56px;
   }
-  
-  #menu1, #menu8 {
-    background-color:red;
-  }
-  
-  #menu1 {
-    height:48px;
-    max-height:48px;
-  }
-  
-  #menu2, #menu9 {
-    background-color:orange;
-  }
-  
-  #menu2 {
-    height:56px;
-    max-height:56px;
-  }
-  
-  #menu3 {
-    background-color:yellow;
-  }
-  
-  #menu3 {
-    height:64px;
-    max-height:64px;
-  }
-  
-  #menu4 {
-    background-color:green;
-  }
-  
-  #menu4 {
-    height:72px;
-    max-height:72px;
-  }
-  
-  #menu5 {
-    background-color:blue;
-  }
-  
-  #menu5 {
-    height:80px;
-    max-height:80px;
-  }
-  
-  #menu6 {
-    background-color:indigo;
-  }
-  
-  #menu6 {
-    height:88px;
-    max-height:88px;
-  }
-  
-  #menu7 {
-    background-color:violet;
-  }
-  
-  #menu7 {
-    height:96px;
-    max-height:96px;
-  }
-  
+
+  #menu1,
   #menu8 {
-    height:104px;
-    max-height:104px;
+    background-color: red;
   }
-  
+
+  #menu1 {
+    height: 48px;
+    max-height: 48px;
+  }
+
+  #menu2,
   #menu9 {
-    height:112px;
-    max-height:112px;
+    background-color: orange;
+  }
+
+  #menu2 {
+    height: 56px;
+    max-height: 56px;
+  }
+
+  #menu3 {
+    background-color: yellow;
+  }
+
+  #menu3 {
+    height: 64px;
+    max-height: 64px;
+  }
+
+  #menu4 {
+    background-color: green;
+  }
+
+  #menu4 {
+    height: 72px;
+    max-height: 72px;
+  }
+
+  #menu5 {
+    background-color: blue;
+  }
+
+  #menu5 {
+    height: 80px;
+    max-height: 80px;
+  }
+
+  #menu6 {
+    background-color: indigo;
+  }
+
+  #menu6 {
+    height: 88px;
+    max-height: 88px;
+  }
+
+  #menu7 {
+    background-color: violet;
+  }
+
+  #menu7 {
+    height: 96px;
+    max-height: 96px;
+  }
+
+  #menu8 {
+    height: 104px;
+    max-height: 104px;
+  }
+
+  #menu9 {
+    height: 112px;
+    max-height: 112px;
   }
